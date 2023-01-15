@@ -19,6 +19,7 @@ public class User {
    @Column(name = "email")
    private String email;
 
+
    public User() {}
    
    public User(String firstName, String lastName, String email) {
@@ -26,6 +27,8 @@ public class User {
       this.lastName = lastName;
       this.email = email;
    }
+
+
 
    public Long getId() {
       return id;
