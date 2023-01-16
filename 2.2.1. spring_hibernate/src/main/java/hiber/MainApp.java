@@ -28,13 +28,33 @@ public class MainApp {
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
+
          if(user.getCar()!=null) {
+            System.out.println();
+            System.out.println("Cad_id = "+ user.getCar().getId());
             System.out.println("User's car = "+user.getCar().getModel());
             System.out.println("User's car's seies = "+user.getCar().getSeries());
          }
-
          System.out.println();
       }
+
+      User user = userService.getUserByCar("model5",  12345);
+
+         System.out.println("======================================================================================");
+
+         System.out.println("Car User");
+         System.out.println("Id = "+user.getId());
+         System.out.println("First Name = "+user.getFirstName());
+         System.out.println("Last Name = "+user.getLastName());
+         System.out.println("Email = "+user.getEmail());
+         System.out.println();
+         System.out.println("Cad_id = "+ user.getCar().getId());
+
+            System.out.println("User's car = "+user.getCar().getModel());
+            System.out.println("User's car's seies = "+user.getCar().getSeries());
+
+         System.out.println();
+
 
       context.close();
    }
